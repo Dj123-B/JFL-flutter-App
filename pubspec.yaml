@@ -1,0 +1,51 @@
+name: jfl_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.9.0 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  http: ^1.2.1
+  provider: ^6.1.2
+  image_picker: ^1.0.4
+  url_launcher: ^6.1.7
+  flutterwave_standard: ^1.0.8
+  flutter_svg: ^1.0.3
+  shared_preferences: ^2.0.13
+  envied: ^0.3.0
+  syncfusion_flutter_signaturepad: ^30.2.6
+  intl: ^0.20.2
+  flutter_secure_storage: ^9.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/Logo.png"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/images/jfl_logo_foreground.png"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/mpesa.jpeg
+    - assets/images/airtel.jpeg
+    - assets/images/Yas_Tanzania.svg.png
+    - assets/images/halopesa.png
+    - assets/images/CRDB.webp
+    - assets/images/NMB.jpg
+    - assets/images/NBC.webp
+    - assets/images/stanbic_bank.jpg
