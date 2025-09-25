@@ -104,7 +104,7 @@ Future<void> _fetchUserName() async {
       if (token == null) return;
 
       final response = await http.get(
-        Uri.parse('$baseUrl/api/auth/notifications'),
+        Uri.parse('$baseUrl/api/notifications'),
         headers: {'Authorization': 'Bearer $token'},
       );
 
@@ -177,7 +177,7 @@ Future<void> _fetchUserName() async {
       if (token == null) return;
 
       final response = await http.get(
-        Uri.parse('$baseUrl/api/auth/flutterwave-public-key'),
+        Uri.parse('$baseUrl/api/flutterwave-public-key'),
         headers: {'Authorization': 'Bearer $token'},
       );
       
@@ -202,7 +202,7 @@ Future<void> _fetchUserName() async {
       if (token == null) return;
 
       final response = await http.post(
-        Uri.parse('$baseUrl/api/auth/process-payment'),
+        Uri.parse('$baseUrl/api/process-payment'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer $token',
@@ -239,7 +239,7 @@ Future<void> _fetchUserName() async {
       if (token == null) return;
 
       await http.patch(
-        Uri.parse('$baseUrl/api/auth/notifications/$notificationId/mark-read'),
+        Uri.parse('$baseUrl/api/notifications/$notificationId/mark-read'),
         headers: {'Authorization': 'Bearer $token'},
       );
       

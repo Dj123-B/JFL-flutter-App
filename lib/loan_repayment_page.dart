@@ -54,7 +54,7 @@ class _LoanRepaymentPageState extends State<LoanRepaymentPage> {
 
       // 1. Send request to our backend, not Flutterwave directly.
       final response = await http.post(
-        Uri.parse('$baseUrl/api/auth/repay-loan'),
+        Uri.parse('$baseUrl/api/repay-loan'),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
           'Authorization': 'Bearer $token',

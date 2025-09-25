@@ -104,7 +104,7 @@ class AuthService {
   static Future<Map<String, dynamic>> login(String phone, String password) async {
   try {
     final response = await http.post(
-      Uri.parse('$baseUrl/api/users/login'),
+      Uri.parse('$baseUrl/api/auth/login'),
       headers: await _getHeaders(),
       body: jsonEncode({
         'phone': phone,
@@ -207,7 +207,7 @@ class AuthService {
   static Future<Map<String, dynamic>> getNotifications() async {
     try {
       final response = await http.get(
-        Uri.parse('$baseUrl/api/auth/notifications'),
+        Uri.parse('$baseUrl/api/notifications'),
         headers: await _getHeaders(withAuth: true),
       );
       
@@ -238,7 +238,7 @@ class AuthService {
   static Future<Map<String, dynamic>> getLoanStatus() async {
     try {
       final response = await http.get(
-        Uri.parse('$baseUrl/api/auth/loan-status'),
+        Uri.parse('$baseUrl/api/loan-status'),
         headers: await _getHeaders(withAuth: true),
       );
       
@@ -321,7 +321,7 @@ class AuthService {
   static Future<String?> getFlutterwavePublicKey() async {
     try {
       final response = await http.get(
-        Uri.parse('$baseUrl/api/auth/flutterwave-public-key'),
+        Uri.parse('$baseUrl/api/flutterwave-public-key'),
         headers: await _getHeaders(),
       );
       
